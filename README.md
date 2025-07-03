@@ -17,3 +17,7 @@ The AI training works only on Linux and macOS, due to the limitations of the [Sa
 The project uses [uv](https://github.com/astral-sh/uv) as its Python package manager. If you are using an Nvidia card or planning on doing the training on CPU, remove the lines below the comments that say "only needed when AMD GPU is used" on [pyproject.toml](pyproject.toml).
 
 To train, demonstrate, and export the models, you can use the script provided. Remove the lines `export HSA_OVERRIDE_GFX_VERSION=10.3.0` and `export HSA_ENABLE_IPC_MODE_LEGACY=0` before running them if you are not using an AMD card or using a higher-end card.
+
+## Special Thanks
+
+This project uses a [custom fork of the Godot RL Agents](https://github.com/Ivan-267/godot_rl_agents_plugin/tree/SFOnnxInference) addon for it to inference Sample Factory ONNX exports. Thanks to [Ivan](https://github.com/Ivan-267) his efforts.
