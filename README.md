@@ -2,7 +2,7 @@
 
 Botsies is a reimplementation of the two-player fighting game Footsies, developed for reinforcement learning. It is based on the latest version on [Github](https://github.com/hifight/Footsies).
 
-The assets (sprites and audio) used are from the mentioned repo, no assets are ripped from its Steam or mobile releases. All code, other than those under the godot/addons folder, is written by me (Brogolem35).
+The assets (sprites and audio) used are from the mentioned repo, no assets are ripped from its Steam or mobile releases. All code, other than those under the godot/addons folder, is written by me ([Brogolem35](https://github.com/Brogolem35)).
 
 ## Building the Game
 
