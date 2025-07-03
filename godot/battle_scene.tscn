@@ -1,0 +1,183 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmluegm6yymss"]
+
+[ext_resource type="Theme" uid="uid://68ooi2k3f13c" path="res://base_theme.tres" id="1_6rt2m"]
+[ext_resource type="Script" uid="uid://d2rnc2txe5nfy" path="res://battle_scene.gd" id="1_731f8"]
+[ext_resource type="Texture2D" uid="uid://dtg6iflwqc7e" path="res://art/battle_window.png" id="2_k7e7q"]
+[ext_resource type="Texture2D" uid="uid://cspx3usc1vvdn" path="res://art/fighter/idle_0.png" id="3_o2m7e"]
+[ext_resource type="Texture2D" uid="uid://bt6jlgvh1hbxx" path="res://art/round_0.png" id="5_8g0cm"]
+[ext_resource type="Texture2D" uid="uid://tc2uy1grp1ci" path="res://art/round_1.png" id="5_58rbk"]
+[ext_resource type="Texture2D" uid="uid://cuicy52jofhir" path="res://art/guard.png" id="9_dq0v7"]
+[ext_resource type="Script" uid="uid://ch6fof75pf7kx" path="res://fighter_ai_controller.gd" id="10_2humr"]
+
+[node name="BattleScene" type="Node2D"]
+script = ExtResource("1_731f8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_6rt2m")
+
+[node name="StageBorders" type="TextureRect" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0125
+anchor_top = 0.0222222
+anchor_right = 0.9875
+anchor_bottom = 0.75
+grow_horizontal = 2
+texture = ExtResource("2_k7e7q")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player1" type="TextureRect" parent="CanvasLayer/Panel/StageBorders"]
+z_index = 4
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.190893
+anchor_top = 0.138677
+anchor_right = 0.589893
+anchor_bottom = 0.931298
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_o2m7e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player2" type="TextureRect" parent="CanvasLayer/Panel/StageBorders"]
+z_index = 2
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.465812
+anchor_top = 0.138677
+anchor_right = 0.865385
+anchor_bottom = 0.931298
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_o2m7e")
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Rounds" type="Node" parent="CanvasLayer"]
+
+[node name="P1Round1" type="TextureRect" parent="CanvasLayer/Rounds"]
+anchors_preset = -1
+anchor_left = 0.0583333
+anchor_top = 0.874074
+anchor_right = 0.108854
+anchor_bottom = 0.963889
+texture = ExtResource("5_58rbk")
+metadata/_edit_use_anchors_ = true
+
+[node name="P1Round2" type="TextureRect" parent="CanvasLayer/Rounds"]
+anchors_preset = -1
+anchor_left = 0.115104
+anchor_top = 0.874074
+anchor_right = 0.165625
+anchor_bottom = 0.963889
+texture = ExtResource("5_58rbk")
+metadata/_edit_use_anchors_ = true
+
+[node name="P1Round3" type="TextureRect" parent="CanvasLayer/Rounds"]
+anchors_preset = -1
+anchor_left = 0.170833
+anchor_top = 0.872222
+anchor_right = 0.221354
+anchor_bottom = 0.962037
+texture = ExtResource("5_8g0cm")
+metadata/_edit_use_anchors_ = true
+
+[node name="P2Round3" type="TextureRect" parent="CanvasLayer/Rounds"]
+anchors_preset = -1
+anchor_left = 0.777083
+anchor_top = 0.873148
+anchor_right = 0.827604
+anchor_bottom = 0.962963
+texture = ExtResource("5_8g0cm")
+metadata/_edit_use_anchors_ = true
+
+[node name="P2Round2" type="TextureRect" parent="CanvasLayer/Rounds"]
+anchors_preset = -1
+anchor_left = 0.833854
+anchor_top = 0.873148
+anchor_right = 0.884375
+anchor_bottom = 0.962963
+texture = ExtResource("5_58rbk")
+metadata/_edit_use_anchors_ = true
+
+[node name="P2Round1" type="TextureRect" parent="CanvasLayer/Rounds"]
+anchors_preset = -1
+anchor_left = 0.889583
+anchor_top = 0.871296
+anchor_right = 0.940104
+anchor_bottom = 0.961111
+texture = ExtResource("5_58rbk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Guards" type="Node" parent="CanvasLayer"]
+
+[node name="P1Guard1" type="TextureRect" parent="CanvasLayer/Guards"]
+anchors_preset = -1
+anchor_left = 0.0552083
+anchor_top = 0.0962963
+anchor_right = 0.123958
+anchor_bottom = 0.218519
+texture = ExtResource("9_dq0v7")
+metadata/_edit_use_anchors_ = true
+
+[node name="P1Guard2" type="TextureRect" parent="CanvasLayer/Guards"]
+anchors_preset = -1
+anchor_left = 0.130729
+anchor_top = 0.0972222
+anchor_right = 0.199479
+anchor_bottom = 0.219444
+texture = ExtResource("9_dq0v7")
+metadata/_edit_use_anchors_ = true
+
+[node name="P1Guard3" type="TextureRect" parent="CanvasLayer/Guards"]
+anchors_preset = -1
+anchor_left = 0.207813
+anchor_top = 0.0953704
+anchor_right = 0.276563
+anchor_bottom = 0.217593
+texture = ExtResource("9_dq0v7")
+metadata/_edit_use_anchors_ = true
+
+[node name="P2Guard3" type="TextureRect" parent="CanvasLayer/Guards"]
+anchors_preset = -1
+anchor_left = 0.722917
+anchor_top = 0.0953704
+anchor_right = 0.791667
+anchor_bottom = 0.217593
+texture = ExtResource("9_dq0v7")
+metadata/_edit_use_anchors_ = true
+
+[node name="P2Guard2" type="TextureRect" parent="CanvasLayer/Guards"]
+anchors_preset = -1
+anchor_left = 0.798437
+anchor_top = 0.0962963
+anchor_right = 0.867188
+anchor_bottom = 0.218519
+texture = ExtResource("9_dq0v7")
+metadata/_edit_use_anchors_ = true
+
+[node name="P2Guard1" type="TextureRect" parent="CanvasLayer/Guards"]
+anchors_preset = -1
+anchor_left = 0.875521
+anchor_top = 0.0944444
+anchor_right = 0.944271
+anchor_bottom = 0.216667
+texture = ExtResource("9_dq0v7")
+metadata/_edit_use_anchors_ = true
+
+[node name="AIControllerP1" type="Node2D" parent="."]
+script = ExtResource("10_2humr")
+
+[node name="AIControllerP2" type="Node2D" parent="."]
+script = ExtResource("10_2humr")
+player1 = false

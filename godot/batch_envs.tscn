@@ -1,0 +1,766 @@
+[gd_scene load_steps=3 format=3 uid="uid://q7d6nwq3lnic"]
+
+[ext_resource type="PackedScene" uid="uid://bmluegm6yymss" path="res://battle_scene.tscn" id="1_i6enm"]
+[ext_resource type="Script" uid="uid://d2t8fji84osji" path="res://addons/godot_rl_agents/sync.gd" id="2_lawla"]
+
+[node name="BatchEnvs" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="BattleScene" parent="Node2D" instance=ExtResource("1_i6enm")]
+
+[node name="BattleScene2" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene2" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene2/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene2/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene2/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene2/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene2/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene2/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene2/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene2/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene2/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene2/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene2/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene2/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene2" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene2" index="2"]
+visible = false
+
+[node name="BattleScene3" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene3" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene3/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene3/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene3/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene3/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene3/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene3/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene3/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene3/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene3/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene3/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene3/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene3/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene3" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene3" index="2"]
+visible = false
+
+[node name="BattleScene4" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene4" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene4/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene4/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene4/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene4/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene4/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene4/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene4/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene4/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene4/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene4/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene4/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene4/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene4" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene4" index="2"]
+visible = false
+
+[node name="BattleScene5" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene5" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene5/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene5/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene5/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene5/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene5/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene5/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene5/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene5/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene5/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene5/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene5/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene5/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene5" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene5" index="2"]
+visible = false
+
+[node name="BattleScene6" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene6" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene6/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene6/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene6/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene6/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene6/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene6/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene6/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene6/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene6/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene6/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene6/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene6/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene6" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene6" index="2"]
+visible = false
+
+[node name="BattleScene7" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene7" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene7/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene7/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene7/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene7/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene7/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene7/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene7/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene7/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene7/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene7/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene7/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene7/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene7" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene7" index="2"]
+visible = false
+
+[node name="BattleScene8" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene8" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene8/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene8/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene8/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene8/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene8/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene8/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene8/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene8/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene8/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene8/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene8/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene8/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene8" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene8" index="2"]
+visible = false
+
+[node name="BattleScene9" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene9" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene9/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene9/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene9/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene9/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene9/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene9/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene9/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene9/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene9/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene9/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene9/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene9/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene9" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene9" index="2"]
+visible = false
+
+[node name="BattleScene10" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene10" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene10/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene10/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene10/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene10/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene10/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene10/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene10/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene10/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene10/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene10/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene10/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene10/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene10" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene10" index="2"]
+visible = false
+
+[node name="BattleScene11" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene11" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene11/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene11/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene11/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene11/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene11/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene11/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene11/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene11/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene11/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene11/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene11/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene11/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene11" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene11" index="2"]
+visible = false
+
+[node name="BattleScene12" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene12" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene12/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene12/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene12/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene12/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene12/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene12/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene12/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene12/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene12/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene12/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene12/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene12/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene12" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene12" index="2"]
+visible = false
+
+[node name="BattleScene13" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene13" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene13/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene13/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene13/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene13/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene13/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene13/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene13/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene13/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene13/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene13/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene13/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene13/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene13" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene13" index="2"]
+visible = false
+
+[node name="BattleScene14" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene14" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene14/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene14/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene14/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene14/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene14/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene14/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene14/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene14/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene14/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene14/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene14/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene14/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene14" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene14" index="2"]
+visible = false
+
+[node name="BattleScene15" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene15" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene15/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene15/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene15/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene15/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene15/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene15/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene15/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene15/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene15/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene15/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene15/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene15/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene15" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene15" index="2"]
+visible = false
+
+[node name="BattleScene16" parent="Node2D" instance=ExtResource("1_i6enm")]
+visible = false
+graphics = false
+
+[node name="CanvasLayer" parent="Node2D/BattleScene16" index="0"]
+visible = false
+
+[node name="P1Round1" parent="Node2D/BattleScene16/CanvasLayer/Rounds" index="0"]
+visible = false
+
+[node name="P1Round2" parent="Node2D/BattleScene16/CanvasLayer/Rounds" index="1"]
+visible = false
+
+[node name="P1Round3" parent="Node2D/BattleScene16/CanvasLayer/Rounds" index="2"]
+visible = false
+
+[node name="P2Round3" parent="Node2D/BattleScene16/CanvasLayer/Rounds" index="3"]
+visible = false
+
+[node name="P2Round2" parent="Node2D/BattleScene16/CanvasLayer/Rounds" index="4"]
+visible = false
+
+[node name="P2Round1" parent="Node2D/BattleScene16/CanvasLayer/Rounds" index="5"]
+visible = false
+
+[node name="P1Guard1" parent="Node2D/BattleScene16/CanvasLayer/Guards" index="0"]
+visible = false
+
+[node name="P1Guard2" parent="Node2D/BattleScene16/CanvasLayer/Guards" index="1"]
+visible = false
+
+[node name="P1Guard3" parent="Node2D/BattleScene16/CanvasLayer/Guards" index="2"]
+visible = false
+
+[node name="P2Guard3" parent="Node2D/BattleScene16/CanvasLayer/Guards" index="3"]
+visible = false
+
+[node name="P2Guard2" parent="Node2D/BattleScene16/CanvasLayer/Guards" index="4"]
+visible = false
+
+[node name="P2Guard1" parent="Node2D/BattleScene16/CanvasLayer/Guards" index="5"]
+visible = false
+
+[node name="AIControllerP1" parent="Node2D/BattleScene16" index="1"]
+visible = false
+
+[node name="AIControllerP2" parent="Node2D/BattleScene16" index="2"]
+visible = false
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("2_lawla")
+action_repeat = 5
+speed_up = 8.0
+
+[editable path="Node2D/BattleScene2"]
+[editable path="Node2D/BattleScene3"]
+[editable path="Node2D/BattleScene4"]
+[editable path="Node2D/BattleScene5"]
+[editable path="Node2D/BattleScene6"]
+[editable path="Node2D/BattleScene7"]
+[editable path="Node2D/BattleScene8"]
+[editable path="Node2D/BattleScene9"]
+[editable path="Node2D/BattleScene10"]
+[editable path="Node2D/BattleScene11"]
+[editable path="Node2D/BattleScene12"]
+[editable path="Node2D/BattleScene13"]
+[editable path="Node2D/BattleScene14"]
+[editable path="Node2D/BattleScene15"]
+[editable path="Node2D/BattleScene16"]

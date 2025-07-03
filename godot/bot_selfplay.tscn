@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds83seg55fudb"]
+
+[ext_resource type="PackedScene" uid="uid://7h4ttb71h1ov" path="res://play_against_bot.tscn" id="1_mysh8"]
+
+[node name="BattleScene" instance=ExtResource("1_mysh8")]
+player1_type = 3
