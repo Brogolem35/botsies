@@ -20,6 +20,8 @@ The project uses [uv](https://github.com/astral-sh/uv) as its Python package man
 
 To train, demonstrate, and export the models, you can use the script provided. Remove the lines `export HSA_OVERRIDE_GFX_VERSION=10.3.0` and `export HSA_ENABLE_IPC_MODE_LEGACY=0` before running them if you are not using an AMD card or using a higher-end card.
 
+To train, you must get a release build of the game. The process can be hastened with the [godot-export.sh](godot/godot-export.sh) script that can be found under the godot folder.
+
 ## Special Thanks
 
 This project uses a [custom fork of the Godot RL Agents](https://github.com/Ivan-267/godot_rl_agents_plugin/tree/SFOnnxInference) addon for it to inference Sample Factory ONNX exports. Thanks to [Ivan](https://github.com/Ivan-267) his efforts.
