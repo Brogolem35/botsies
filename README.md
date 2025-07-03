@@ -4,6 +4,8 @@ Botsies is a reimplementation of the two-player fighting game Footsies, develope
 
 The assets (sprites and audio) used are from the mentioned repo, no assets are ripped from its Steam or mobile releases. All code, other than those under the godot/addons folder, is written by me ([Brogolem35](https://github.com/Brogolem35)).
 
+[https://github.com/user-attachments/assets/01e6cd99-a893-4604-80ac-89cc3c346315](https://github.com/user-attachments/assets/01e6cd99-a893-4604-80ac-89cc3c346315)
+
 ## Building the Game
 
 First install the Rust compiler, and run `cargo build` on the rust folder, run with `--release` flag if you want to get a release build.
