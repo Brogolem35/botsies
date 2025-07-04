@@ -4,6 +4,12 @@ Botsies is a reimplementation of the two-player fighting game Footsies, develope
 
 The assets (sprites and audio) used are from the mentioned repo, no assets are ripped from its Steam or mobile releases. All code, other than those under the godot/addons folder, is written by me ([Brogolem35](https://github.com/Brogolem35)).
 
+There is a pre-trained agent in ONNX format, that can be found under the godot folder, named `model.onnx`. Its features and a demo video of it can be found under the [About the AI](#about-the-ai) section.
+
+## About the AI
+
+The aim of trained AI was not for it be play as good as possible, but for it to feel fair, enjoyable, and somewhat human-like. For this reason, the AI gets the observations on a delay of 12 frames (about 199 ms), and the reward function fine-tuned for the aim of it be more aggressive and enjoyable to play against.
+
 [https://github.com/user-attachments/assets/01e6cd99-a893-4604-80ac-89cc3c346315](https://github.com/user-attachments/assets/01e6cd99-a893-4604-80ac-89cc3c346315)
 
 ## Building the Game
